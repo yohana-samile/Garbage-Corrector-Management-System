@@ -1,10 +1,5 @@
-<?php require_once('../includes/config.php') ?>
-<?php  
-    // $data = ['user_id'=>$_SESSION['UserID']];
-    // $user_profile_detatile_sql = "SELECT * FROM user WHERE user_id = :user_id"; 
-    // $user_profile_detatile_query = $dbh->prepare($user_profile_detatile_sql);
-    // $user_profile_detatile_query->execute($data);
-    // $user_profile_detatile = $user_profile_detatile_query->fetch(); 
+<?php require_once('../include/config.php');
+    $title = "Dashboard";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +11,7 @@
     <meta name="description" content="Komba Vehicle management system">
     <meta name="author" content="Komba Vehicle management system">
     <link rel="icon" href="../icon.png" type="image/png">
-    <title>KVMS | <?PHP echo $title ?></title>
+    <title>GCMS | <?PHP echo $title ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +29,7 @@
 
     <style type="text/css">
         .bg {
-            background-color: #024e5a;
+            background-color: #f2f2f2;
         }
         .vms-btn {
             background-color: #024e5a;
@@ -56,11 +51,11 @@
         }
 
         .kvm-bg {
-            background-color: #024e5a;
+            background-color: #f2f2f2;
         }
 
         .kvm-color {
-            color: #024e5a;
+            color:##f2f2f2;
         }
 
         #search_date, #search_exipendture_type {
@@ -138,14 +133,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav kvm-bg sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav kvm-bg sidebar sidebar-primary accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-car"></i>
+                    <img src="dump-truck-icon-png.png" alt="GDCMS" style="width: 70px;">
                 </div>
-                <div class="sidebar-brand-text mx-3">KVMS</div>
+                <div class="sidebar-brand-text mx-3">GCMS</div>
             </a>
 
             <!-- Divider -->
@@ -153,7 +148,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link bg-primary text-white" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -171,104 +166,76 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">User Management:</h6>
                         <a class="collapse-item" href="driver.php"> 
-                            <i class="fa fa-user text-danger"></i> Driver
+                            <i class="fa fa-user text-primary"></i> Drivers
                         </a>
-                        <a class="collapse-item" href="user.php">
-                            <i class="fa fa-user-circle text-danger"></i> User
+                        <a class="collapse-item" href="customer.php">
+                            <i class="fa fa-user-circle text-primary"></i> Customers
                         </a>
                     </div>
                 </div>
             </li>
 
               <!-- Divider -->
-            <hr class="sidebar-divider">
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#carcomponent"
-                    aria-expanded="true" aria-controls="carcomponent">
-                    <i class="fas fa-fw fa-bus"></i>
-                    <span>  Vehicle Management  </span>
-                </a>
-                <div id="carcomponent" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Vehicles:</h6>
-                        <a class="collapse-item" href="vehicle.php">
-                            <i class="fas fa-fw fa-car text-danger"></i> vehicle
-                        </a>
-                        <a class="collapse-item" href="maintainance.php">
-                            <i class="fas fa-fw fa-wrench text-danger"></i> Maintainance
-                        </a>
-                        <h6 class="collapse-header">Car Components:</h6>
-                        <a class="collapse-item" href="brand.php">
-                            <i class="fa fa-database text-danger"></i> Brand
-                        </a>
-                        <a class="collapse-item" href="engine_type.php">
-                            <i class="fa fa-database fa-sm text-danger"></i> Engine
-                        </a>
-                        <a href="fuel_type.php" class="collapse-item">
-                            <i class="fas fa-gas-pump text-danger"></i> Fuel type
-                        </a>
-                    </div>
-                </div>
-            </li>
 
             <hr class="sidebar-divider">
                <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#income"
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#settings"
                     aria-expanded="true" aria-controls="Component">
-                    <i class="fa fa-fw fa-money "></i>
-                    <span> Income </span>
+                    <i class="fa fa-cog "></i>
+                    <span> System Settings </span>
                 </a>
-                <div id="income" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="settings" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <h6 class="collapse-header">Income Management:</h6>
-                        <a class="collapse-item" href="income.php"> 
-                            <i class="fa fa-money text-danger"></i> income
+                        <h6 class="collapse-header">System Settings:</h6>
+                        <a class="collapse-item" href="#"> 
+                            <i class="fa fa-money text-primary"></i> Lock Account
                         </a>
-                        <a class="collapse-item" href="income-source.php">
-                            <i class="fa fa-list text-danger"></i> Income Source
+                        <a class="collapse-item" href="my_profile.php">
+                            <i class="fa fa-list text-primary"></i> Manage Profile
                         </a>
-                        
-                        <h6 class="collapse-header">Accounts Management:</h6>
-                        <a class="collapse-item" href="account-balance.php"> 
-                            <i class="fa fa-bank text-danger"></i> Account Balance
-                        </a>
-                        <a class="collapse-item" href="account-chart.php">
-                            <i class="fa fa-list text-danger"></i> Account Chart
-                        </a>
-
-                        <h6 class="collapse-header">Expenditure Management:</h6>
-                        <a class="collapse-item" href="expenditure.php"> 
-                            <i class="fa fa-money text-danger"></i> Expenditures
-                        </a>
-                        <a class="collapse-item" href="expenditure-type.php">
-                            <i class="fa fa-gears text-danger"></i> Expenditure type
+                        <a class="collapse-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fa fa-list text-primary"></i> Log Me Out
                         </a>
                     </div>
                 </div>
             </li>
+             <!-- Divider -->
+             <hr class="sidebar-divider d-none d-md-block">
 
+            <li class="nav-item active">
+                <a class="nav-link" href="street.php">
+                    <i class="fas fa-street-view"></i>
+                    <span>Streets</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="truck.php">
+                    <i class="fas fa-truck"></i>
+                    <span>Trucks</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <button class="rounded-circle border-0 text-primary" id="sidebarToggle" style="background-color: white;"></button>
             </div>
 
         </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column bg-white">
 
             <!-- Main Content -->
             <div id="content">
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+                    <h3 class="text-capitalize">&#128075;<?php echo$_SESSION['staff_record']['staff_full_name']; ?></h3>
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -314,22 +281,14 @@
                               
                                 </span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="../default.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="user-profile.php">
+                                <a class="dropdown-item" href="my_profile.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="logs.php">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
