@@ -1,5 +1,4 @@
 <?php require_once('../includes/config.php') ?>
-<?php require_once('../includes/mustlogin.php') ?>
 <?php  
     // $data = ['user_id'=>$_SESSION['UserID']];
     // $user_profile_detatile_sql = "SELECT * FROM user WHERE user_id = :user_id"; 
