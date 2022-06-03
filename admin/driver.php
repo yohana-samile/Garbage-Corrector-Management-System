@@ -1,4 +1,7 @@
-<?php require_once('includes/sidebar.php'); ?>
+<?php 
+    require_once('includes/sidebar.php');
+    if(isset($_GET['key'])){}
+?>
 <h3 class="text-center text-capitalize">This is list of registered staff</h3>
 <div class="row animated--grow-in">
     <div class="col-xl-12">
@@ -23,7 +26,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $sn = 0;
+                            $sn = 1;
                             $get_staff_record = $connection->query("SELECT * FROM staff, street, user_position WHERE
                                 staff.position_id = user_position.position_id AND
                                 staff.street_assined = street.street_id ");
@@ -35,9 +38,8 @@
                                         <td><?php echo $get_staff_result['staff_full_name']; ?> </td>
                                         <td><?php echo $get_staff_result['email']; ?> </td>
                                         <td><?php echo $get_staff_result['street_name']; ?> </td>
-                                        <td><?php echo $get_staff_result['profile']; ?> </td>
+                                        <td><img src="../<?php echo $get_staff_result['profile']; ?>" alt="" style="width: 50px;"> </td>
                                         <td>
-                                            <a href=""><i class="fa fa-eye"></i></a>
                                             <a href=""><i class="fa fa-edit text-warning"></i></a>
                                             <a href=""><i class="fa fa-trash-o text-danger"></i></a>
                                         </td>

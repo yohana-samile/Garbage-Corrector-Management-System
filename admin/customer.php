@@ -6,7 +6,7 @@
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <div></div>
                     <button class="d-none d-sm-inline-block btn btn-primary btn-sm shadow-sm" data-toggle="modal"
-                        data-target="#new_driver_staff">New Customer <i class="fa fa-plus fa-sm"></i>
+                        data-target="#new_customer_staff">New Customer <i class="fa fa-plus fa-sm"></i>
                     </button>
             </div>
             <div class="table-responsive">
@@ -48,7 +48,6 @@
                                             ?> 
                                         </td>
                                         <td>
-                                            <a href=""><i class="fa fa-eye"></i></a>
                                             <a href=""><i class="fa fa-edit text-warning"></i></a>
                                             <a href=""><i class="fa fa-trash-o text-danger"></i></a>
                                         </td>
@@ -62,5 +61,5 @@
     </div>
 
     <?php require_once('includes/footer.php'); ?>
-    <?php require_once('modals/new_driver_staff.php'); ?>
+    <?php require_once('modals/new_customer_staff.php'); ?>
 </div>

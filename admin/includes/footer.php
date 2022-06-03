@@ -62,8 +62,15 @@
     <script src="js/demo/datatables-demo.js"></script>
 
     <script type="text/javascript">
+    // new window doc
     
-$(document).ready(function() {
+    function myProfile(){
+        var profile = window.open('', '_blank', 'height=500 width=750');
+            profile.document.write(document.getElementById('my_profile').innerHTML);
+    }
+    // hide alert
+    $(document).ready(function() {
+
     $(".alert").hide();
   
     $(".alert").fadeTo(5000, 1000).slideUp(1000, function() {

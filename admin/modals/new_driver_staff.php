@@ -8,7 +8,7 @@
                     <span aria-hidden="true" class="text-white">&times;</span>
                 </button>
             </div>
-            <form action="" method="POST">
+            <form action="register_staff_driver.php" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
                         <input type="text" name="staff_full_name" placeholder="Enter full name" class="form-control">
@@ -17,23 +17,11 @@
                         <input type="email" name="email" placeholder="Enter email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <select name="position" class="form-control">
-                            <!-- getting driver position -->
-                            <?php
-                                $select_position_record = $connection->query("SELECT * FROM `user_position`");
-                                $select_position  = mysqli_num_rows($select_position_record);
-                                while($select_position = mysqli_fetch_array($select_position_record)):
-                                    if($select_position >0): ?>
-                                        <option hidden>Choose Staff Position </option>
-                                        <option value="<?php echo $select_position['position_id']; ?>"><?php echo $select_position['position_name']; ?></option>
-                                    <?php endif;
-                                endwhile;
-                            ?>
-                        </select>
+                        <input type="password" name="password" placeholder="Enter password" hidden class="form-control">
                     </div>
                     <div class="form-group">
-                        <select name="position" class="form-control">
-                            <!-- getting driver position -->
+                        <select name="street_assined" class="form-control">
+                            <!-- getting driver street_assined -->
                             <?php
                                 $select_street_record = $connection->query("SELECT * FROM `street`");
                                 $select_street  = mysqli_num_rows($select_street_record);
@@ -47,7 +35,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" placeholder="Enter password" required class="form-control">
+                        <select name="position_id" class="form-control">
+                            <!-- getting driver position -->
+                            <?php
+                                $select_position_record = $connection->query("SELECT * FROM `user_position`");
+                                $select_position  = mysqli_num_rows($select_position_record);
+                                while($select_position = mysqli_fetch_array($select_position_record)):
+                                    if($select_position >0): ?>
+                                        <option hidden>Choose Staff Position </option>
+                                        <option value="<?php echo $select_position['position_id']; ?>"><?php echo $select_position['position_name']; ?></option>
+                                    <?php endif;
+                                endwhile;
+                            ?>
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" name="new_driver_staff" class="btn btn-primary">Register Driver Staff</button>

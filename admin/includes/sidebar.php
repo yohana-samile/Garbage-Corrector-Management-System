@@ -154,6 +154,46 @@
             </li>
 
             <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="truck_request.php">
+                    <i class="fas fa-money"></i>
+                    <span>Truck Request</span></a>
+            </li>
+            <!-- divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="live_truck_request.php">
+                    <i class="fas fa-money"></i>
+                    <span>Live Truck Request</span></a>
+            </li>
+            <!-- divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="money.php">
+                    <i class="fas fa-money"></i>
+                    <span>Amount Obtained</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="street.php">
+                    <i class="fas fa-street-view"></i>
+                    <span>Streets</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="truck.php">
+                    <i class="fas fa-truck"></i>
+                    <span>Trucks</span></a>
+            </li>
+            <!-- divider -->
             <hr class="sidebar-divider">
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -174,8 +214,7 @@
                     </div>
                 </div>
             </li>
-
-              <!-- Divider -->
+             <!-- Divider -->
 
             <hr class="sidebar-divider">
                <li class="nav-item">
@@ -189,32 +228,16 @@
                         
                         <h6 class="collapse-header">System Settings:</h6>
                         <a class="collapse-item" href="#"> 
-                            <i class="fa fa-money text-primary"></i> Lock Account
+                            <i class="fa fa-lock text-primary"></i> Lock Account
                         </a>
                         <a class="collapse-item" href="my_profile.php">
                             <i class="fa fa-list text-primary"></i> Manage Profile
                         </a>
                         <a class="collapse-item" href="../logout.php" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fa fa-list text-primary"></i> Log Me Out
+                            <i class="fa fa-lock text-primary"></i> Log Me Out
                         </a>
                     </div>
                 </div>
-            </li>
-             <!-- Divider -->
-             <hr class="sidebar-divider d-none d-md-block">
-
-            <li class="nav-item active">
-                <a class="nav-link" href="street.php">
-                    <i class="fas fa-street-view"></i>
-                    <span>Streets</span></a>
-            </li>
-
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <li class="nav-item active">
-                <a class="nav-link" href="truck.php">
-                    <i class="fas fa-truck"></i>
-                    <span>Trucks</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

@@ -7,16 +7,20 @@
                 if($result >0){
                     $result = mysqli_fetch_array($get_user_record); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" value="<?php echo $result['staff_full_name']; ?>" placeholder="Full Name">
+                            <label for="name">Your Name</label>
+                            <input type="text"  id="name"class="form-control" value="<?php echo $result['staff_full_name']; ?>" placeholder="Full Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" value="<?php echo $result['email']; ?>" placeholder="Full Name">
+                            <label for="email">email OR usename</label>
+                            <input type="text" id="email" class="form-control" value="<?php echo $result['email']; ?>" placeholder="Full Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" value="<?php echo $result['position_name']; ?>" placeholder="Full Name">
+                            <label for="position">Your Position</label>
+                            <input type="text" id="position" class="form-control" value="<?php echo $result['position_name']; ?>" placeholder="Full Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" value="<?php echo $result['street_name']; ?>" placeholder="Full Name">
+                            <label for="street">Street Assined</label>
+                            <input type="text" id="street" class="form-control" value="<?php echo $result['street_name']; ?>" placeholder="Full Name">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary float-right">Update Profile</button>
